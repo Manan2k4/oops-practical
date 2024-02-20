@@ -17,37 +17,38 @@ private:
     int radius;
 public:
 
-    area()
+   area()
     {
     count++;
     radius=1;
-    cout<<"circle with radius 1 "<<endl;
+    cout<<"circle with radius "<<radius<<" has area : "<<3.14*radius*radius<<endl;
     }
     area(float x)
     {
-        count++;
-        radius=x;
-          cout<<"circle with radius  "<<x<<endl;
+    count++;
+    radius=x;
+    cout<<"circle with radius  "<<x<<" has area:"<<3.14*radius*radius<<endl;
     }
     area(area &r)
     {
         count++;
         radius=r.radius;
-          cout<<"circle with radius "<<radius<<endl;
+          cout<<"circle with radius "<<radius<<" has area:"<<3.14*radius*radius<<endl;
     }
     ~area()
     {
-         count--;
+        count--;
+        cout<<"------------------------------"<<endl;
         cout<<"one object is deleted"<<endl;
         cout<<"total active object are "<<count<<endl;
+        cout<<"------------------------------"<<endl;
 
     }
-
 };
 int main()
 {
     area o1;
     area o2(20);
-    area o3(o1);
+    area o3(o2);
 }
 
