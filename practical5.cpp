@@ -1,4 +1,4 @@
-This program is created by 23CS025 */
+/* This program is created by 23CS025 */
 
 /*
 Set circle radius to 1 when the new circle object is created.
